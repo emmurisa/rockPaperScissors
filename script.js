@@ -10,6 +10,8 @@
     👉 Higher order Function (Math.random())
 */
 
+let totalScore = 0;
+
 // ** getComputerChoice randomly selects between `rock` `paper` `scissors` and returns that string **
 // getComputerChoice() 👉 'Rock'
 // getComputerChoice() 👉 'Scissors'
@@ -26,7 +28,7 @@ function getComputerChoice() {
 function getResult(playerChoice, computerChoice) {
   // return the result of score based on if you won, drew, or lost
   // All situations where human draws, set `score` to 0
-  // All situations where human wins, set `score` to 1
+  // All situations where human wins, set `score` to 1    
   // make sure to use else ifs here 
   // Otherwise human loses (aka set score to -1) 
   // return score
@@ -53,15 +55,15 @@ function showResult(score, playerChoice, computerChoice) {
     let hands = document.getElementById('hands');
     
     if (score === 1) {
-        playerScore.innerText = score;
+        playerScore.innerText = `Your Score: ${totalScore += score}`;
         hands.innerText = `Player ${playerChoice} vs Computer ${computerChoice}`;
         result.innerText = "You Win!";        
     } else if (score === -1) {
-        playerScore.innerText = score;
+        playerScore.innerText =  `Your Score: ${totalScore += score}`;
         hands.innerText = `Player ${playerChoice} vs Computer ${computerChoice}`;
         result.innerText = "You Lose!";
     } else {
-        playerScore.innerText = score;
+        playerScore.innerText =  `Your Score: ${totalScore += score}`;
         hands.innerText = `Player ${playerChoice} vs Computer ${computerChoice}`;
         result.innerText = "It's a Draw!";
     }
@@ -100,6 +102,7 @@ function playGame() {
 
 // ** endGame function clears all the text on the DOM **
 function endGame() {  
+    totalScore = 0;
     let playerScore = document.getElementById('player-score');
     playerScore.innerText ='';
     let result = document.getElementById('result');
