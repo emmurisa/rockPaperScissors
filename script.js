@@ -56,15 +56,15 @@ function showResult(score, playerChoice, computerChoice) {
     
     if (score === 1) {
         playerScore.innerText = `Your Score: ${totalScore += score}`;
-        hands.innerText = `Player ${playerChoice} vs Computer ${computerChoice}`;
+        hands.innerText = `🧑 ${playerChoice} vs 💻 ${computerChoice}`;
         result.innerText = "You Win!";        
     } else if (score === -1) {
         playerScore.innerText =  `Your Score: ${totalScore += score}`;
-        hands.innerText = `Player ${playerChoice} vs Computer ${computerChoice}`;
+        hands.innerText = `🧑 ${playerChoice} vs 💻 ${computerChoice}`;
         result.innerText = "You Lose!";
     } else {
         playerScore.innerText =  `Your Score: ${totalScore += score}`;
-        hands.innerText = `Player ${playerChoice} vs Computer ${computerChoice}`;
+        hands.innerText = `🧑 ${playerChoice} vs 💻 ${computerChoice}`;
         result.innerText = "It's a Draw!";
     }
 
